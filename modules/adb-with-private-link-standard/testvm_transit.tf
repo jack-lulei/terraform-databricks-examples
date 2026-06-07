@@ -67,7 +67,7 @@ resource "azurerm_windows_virtual_machine" "testvm" {
   name                = "${local.prefix}vm"
   resource_group_name = local.transit_rg_name
   location            = local.transit_rg_location
-  size                = "Standard_D2s_v5"
+  size                = "Standard_B2s"
   admin_username      = "azureuser"
   admin_password      = "T${random_string.password.result}!!"
   network_interface_ids = [
